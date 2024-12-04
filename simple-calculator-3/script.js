@@ -11,7 +11,8 @@ function refreshDisplay() {  //this function is named refreshDisplay
     // previousNumbers = the numbers previously shown on the calculator before the currentNumbers
 }
 
-function clickedButton(value) { //function named "clickedButton"
+
+function clickedButton(value) { //function named "clickedButton", this function will process the value of the button that was clicked
 
 // value = the value that shows up when a button is being clicked 
 
@@ -40,7 +41,7 @@ function equalsButton() { //this function is called "equalsButton" and will hand
 
         currentNumbers += ` = ${previousNumbers}`;  //currentNumbers holds the expression that is currently being displayed, 
         //the += operator will add a value to the current value(currentNumbers). 
-        // `= ${previousNumbers}` represents the result of a previous calculation and it will be appended to the end of currentNumbers
+        // `= ${previousNumbers}` represents the result of a previous calculation and it will be added to the end of currentNumbers
 
         refreshDisplay(); //this will update the calculator's display
 
@@ -81,7 +82,7 @@ function buttonsDisable(disable) { //name of function: "buttonsDisable"
 //".addEventListener('click'," will attach an event listener to the buttons and listens for a 'click' event
 //"() => clickedButton('')" this has an arrow function that will run when a button is being clicked
 //(Example: when someone clicks the 8 button, clickedButton('8') function will be triggered and will process its value "8")
-document.getElementById('button-7').addEventListener('click', () => clickedButton('7')); //this adds an event listener to the 7 button
+document.getElementById('button-7').addEventListener('click', () => clickedButton('7')); //this adds an event listener to the 7 button, when the button gets clicked, the function "clickedButton" will get called along with the value (of the button that is clicked)
 document.getElementById('button-8').addEventListener('click', () => clickedButton('8')); //this adds an event listener to the 8 button
 document.getElementById('button-9').addEventListener('click', () => clickedButton('9')); //this adds an event listener to the 9 button
 document.getElementById('button-plus').addEventListener('click', () => clickedButton('+')); //this adds an event listener to the addition button
